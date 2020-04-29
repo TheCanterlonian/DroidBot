@@ -262,13 +262,15 @@ namespace DroidBot
             SyndicationItem item = feed.Items.First();
             String subject = item.Title.Text;
             String summary = item.Summary.Text;
+            string sepperator = ("\n");
+            string linkToNews = ("https://forums.galaxy-of-heroes.starwars.ea.com/categories/news-and-announcements-");
             //read file and match with new input
             string oldText = File.ReadAllText("subject.txt");
-            string newText = (subject+summary);
+            string newText = (subject+sepperator+linkToNews+sepperator+summary);
             if (oldText != newText)
             {
-                File.WriteAllText("subject.txt",subject+summary);
-                return (subject+summary);
+                File.WriteAllText("subject.txt",newText);
+                return (newText);
             }
             else
             {
@@ -277,5 +279,6 @@ namespace DroidBot
         }
     }
 }
+
 
 
