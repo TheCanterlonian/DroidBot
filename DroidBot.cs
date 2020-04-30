@@ -269,13 +269,42 @@ namespace DroidBot
             string newText = (subject+sepperator+linkToNews+sepperator+summary);
             if (oldText != newText)
             {
+                //write updates to the file
                 File.WriteAllText("subject.txt",newText);
+                //remove html tags from the content
+                newText = tagRemover(newText);
+                //return the updates
                 return (newText);
             }
             else
             {
+                //return no updates
                 return ("No new updates.");
             }
+        }
+        //removes html tags from the output given by updateChecker
+        public static string tagRemover(string removalLines)
+        {
+            //this is an absolute mess!!!
+            removalLines = removalLines.Replace("<br />","\n");
+            removalLines = removalLines.Replace("<b>","**");
+            removalLines = removalLines.Replace("</b>","**");
+            removalLines = removalLines.Replace("<i>","*");
+            removalLines = removalLines.Replace("<a href=\""," ");
+            removalLines = removalLines.Replace("\" rel=\"nofollow\">"," ");
+            removalLines = removalLines.Replace("</a>"," ");
+            removalLines = removalLines.Replace("</i>","*");
+            removalLines = removalLines.Replace("<div>","\n");
+            removalLines = removalLines.Replace("<img src=\""," ");
+            removalLines = removalLines.Replace("\" alt=\""," ");
+            removalLines = removalLines.Replace("\" />"," ");
+            removalLines = removalLines.Replace("</div>","\n");
+            /*
+            this function is very linear but i really did NOT
+            want to put all of this inline with the updateChecker
+            because it's extremely ridiculous how messy it looks.
+            */
+            return removalLines;
         }
     }
 }
