@@ -11,7 +11,7 @@ List of Token Commands:
 <br>
 notYet - exits the program, this is used for debugging
 <br>
-read - read the token in the currently existing token file
+read - read the token in the currently existing token file (will fuck up if there is no token file)
 <br>
 write - write a new token to the file (kinda broken at the moment, i suggest creating the token file manually)
 <br>
