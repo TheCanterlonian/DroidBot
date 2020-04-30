@@ -22,6 +22,6 @@ List of Discord Commands:
 ping - returns "pong"
 <br>
 # Local RSS File
-the bot stores a local file containing the last found node in the rss. changing it's contents will cause the same update to fire next time the check is initiated unless another update came out between the change and the next automated check.
+the bot stores a local file called "subject.txt" containing the last found node in the rss. changing it's contents will cause the same update to fire next time the check is initiated unless another update came out between the change and the next automated check.
 # Automated RSS Checking
 every hour, the bot will automatically check the rss for updates, if there is a new update posted, it will update the local rss file and send a message to the channel specified in the source code at line 209.
