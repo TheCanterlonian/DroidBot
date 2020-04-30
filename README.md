@@ -1,6 +1,8 @@
 # DroidBot
 posts updates for SWGoH in a discord channel.
+<br>
 requires dotnet runtime & SDK installed to run.
+<br>
 use "dotnet run" from inside the project folder to run the bot.
 # Token Commands
 when the bot asks for a token, you can also enter some commands instead and it will tell the difference between them and an actual token.
