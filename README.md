@@ -19,7 +19,7 @@ while the bot is runing, any message sent in a discord channel it can see that s
 <br>
 List of Discord Commands:
 <br>
-ping - returns "pong"
+ping - returns "pong" (normally used in debugging, but it's cute so i'll keep it in release)
 <br>
 # Local RSS File
 the bot stores a local file called "subject.txt" containing the last found node in the rss. changing it's contents will cause the same update to fire next time the check is initiated unless another update came out between the change and the next automated check.
