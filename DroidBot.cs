@@ -171,7 +171,7 @@ namespace DroidBot
                 {
                     await message.Channel.SendMessageAsync("pong");
                 }
-                //check for updates on the forum
+                //manually check for updates on the forum (debugging only, should be disabled for actual implementation)
                 else if (mescon == ("!droid check"))
                 {
                     string updateStatus = updateChecker();
